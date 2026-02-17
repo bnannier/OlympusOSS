@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Missing authorization code" }, { status: 400 });
   }
 
-  const hydraUrl = process.env.IAM_HYDRA_PUBLIC_URL || "http://localhost:7002";
+  const hydraUrl = process.env.IAM_HYDRA_PUBLIC_URL || "http://localhost:4102";
   const clientId = process.env.IAM_CLIENT_ID || "demo-iam-client";
   const clientSecret = process.env.IAM_CLIENT_SECRET || "demo-iam-secret";
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:2000";

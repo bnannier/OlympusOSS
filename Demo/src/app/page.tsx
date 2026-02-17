@@ -41,8 +41,8 @@ export default async function HomePage() {
     } catch {}
   }
 
-  const ciamHydraUrl = process.env.NEXT_PUBLIC_CIAM_HYDRA_URL || "http://localhost:5002";
-  const iamHydraUrl = process.env.NEXT_PUBLIC_IAM_HYDRA_URL || "http://localhost:7002";
+  const ciamHydraUrl = process.env.NEXT_PUBLIC_CIAM_HYDRA_URL || "http://localhost:3102";
+  const iamHydraUrl = process.env.NEXT_PUBLIC_IAM_HYDRA_URL || "http://localhost:4102";
   const ciamClientId = process.env.CIAM_CLIENT_ID || "demo-ciam-client";
   const iamClientId = process.env.IAM_CLIENT_ID || "demo-iam-client";
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:2000";
@@ -68,7 +68,7 @@ export default async function HomePage() {
               <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>Customer Identity (CIAM)</h2>
             </div>
             <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
-              Authenticate as a customer through CIAM Hydra (port 5002) → CIAM Hera (port 3001) → CIAM Medusa (port 3002)
+              Authenticate as a customer through CIAM Hydra (port 3102) → CIAM Hera (port 3001) → CIAM Medusa (port 3002)
             </p>
 
             {ciamData ? (
@@ -96,7 +96,7 @@ export default async function HomePage() {
               <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>Employee Identity (IAM)</h2>
             </div>
             <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
-              Authenticate as an employee through IAM Hydra (port 7002) → IAM Hera (port 4001) → IAM Medusa (port 4002)
+              Authenticate as an employee through IAM Hydra (port 4102) → IAM Hera (port 4001) → IAM Medusa (port 4002)
             </p>
 
             {iamData ? (
@@ -115,6 +115,50 @@ export default async function HomePage() {
                 Login to IAM
               </a>
             )}
+          </div>
+        </div>
+
+        {/* Admin Panels */}
+        <h2 style={{ fontSize: 22, fontWeight: 600, textAlign: "center", marginTop: 48, marginBottom: 24, color: "#94a3b8" }}>
+          Admin Panels
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+          {/* CIAM Athena */}
+          <div style={{ background: "#1e293b", borderRadius: 12, padding: 32, border: "1px solid #334155" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+              <span style={{ background: "#dc2626", borderRadius: 8, width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 700 }}>A</span>
+              <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>CIAM Athena</h2>
+            </div>
+            <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
+              Admin panel for managing customer identities, schemas, and OAuth2 clients on the CIAM domain.
+            </p>
+            <a
+              href="http://localhost:3003"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-block", background: "#dc2626", color: "white", padding: "12px 24px", borderRadius: 8, textDecoration: "none", fontWeight: 600, fontSize: 15 }}
+            >
+              Open CIAM Admin
+            </a>
+          </div>
+
+          {/* IAM Athena */}
+          <div style={{ background: "#1e293b", borderRadius: 12, padding: 32, border: "1px solid #334155" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+              <span style={{ background: "#059669", borderRadius: 8, width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 700 }}>A</span>
+              <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>IAM Athena</h2>
+            </div>
+            <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
+              Admin panel for managing employee identities, schemas, and OAuth2 clients on the IAM domain.
+            </p>
+            <a
+              href="http://localhost:4003"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-block", background: "#059669", color: "white", padding: "12px 24px", borderRadius: 8, textDecoration: "none", fontWeight: 600, fontSize: 15 }}
+            >
+              Open IAM Admin
+            </a>
           </div>
         </div>
 

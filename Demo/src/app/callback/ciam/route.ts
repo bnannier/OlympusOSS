@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Missing authorization code" }, { status: 400 });
   }
 
-  const hydraUrl = process.env.CIAM_HYDRA_PUBLIC_URL || "http://localhost:5002";
+  const hydraUrl = process.env.CIAM_HYDRA_PUBLIC_URL || "http://localhost:3102";
   const clientId = process.env.CIAM_CLIENT_ID || "demo-ciam-client";
   const clientSecret = process.env.CIAM_CLIENT_SECRET || "demo-ciam-secret";
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:2000";

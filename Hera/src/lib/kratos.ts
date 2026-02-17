@@ -1,4 +1,4 @@
-const KRATOS_PUBLIC_URL = process.env.KRATOS_PUBLIC_URL || "http://localhost:7000";
+const KRATOS_PUBLIC_URL = process.env.KRATOS_PUBLIC_URL || "http://localhost:4100";
 
 export async function getSession(cookieHeader: string | null) {
 	if (!cookieHeader) return null;

@@ -1,4 +1,4 @@
-const HYDRA_ADMIN_URL = process.env.HYDRA_ADMIN_URL || "http://localhost:7003";
+const HYDRA_ADMIN_URL = process.env.HYDRA_ADMIN_URL || "http://localhost:4103";
 
 async function hydraAdmin(path: string, method = "GET", body?: unknown) {
 	const opts: RequestInit = {
