@@ -118,6 +118,13 @@ export default async function HomePage() {
           </div>
         </div>
 
+        <div style={{ marginTop: 24, textAlign: "center", color: "#64748b", fontSize: 13 }}>
+          <p>
+            This demo app is an OAuth2 client that tests the full authorization code flow.
+            Each login button redirects to Ory Hydra, which routes through Hera (authentication) and Medusa (consent) before returning here with an authorization code.
+          </p>
+        </div>
+
         {/* Admin Panels */}
         <h2 style={{ fontSize: 22, fontWeight: 600, textAlign: "center", marginTop: 48, marginBottom: 24, color: "#94a3b8" }}>
           Admin Panels
@@ -162,12 +169,6 @@ export default async function HomePage() {
           </div>
         </div>
 
-        <div style={{ marginTop: 48, textAlign: "center", color: "#64748b", fontSize: 13 }}>
-          <p>
-            This demo app is an OAuth2 client that tests the full authorization code flow.
-            Each login button redirects to Ory Hydra, which routes through Hera (authentication) and Medusa (consent) before returning here with an authorization code.
-          </p>
-        </div>
       </div>
     </div>
   );
