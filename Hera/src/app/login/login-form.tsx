@@ -10,7 +10,7 @@ export function LoginForm({ challenge }: { challenge: string }) {
 		<div style={styles.body}>
 			<div style={styles.card}>
 				<h1 style={styles.h1}>Sign In</h1>
-				<p style={styles.subtitle}>Authenticate with your Athena credentials</p>
+				<p style={styles.subtitle}>Sign in with your Olympus account</p>
 
 				{state.error && <div style={styles.error}>{state.error}</div>}
 

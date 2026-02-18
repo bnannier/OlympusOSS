@@ -68,7 +68,7 @@ export default async function HomePage() {
               <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>Customer Identity (CIAM)</h2>
             </div>
             <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
-              Authenticate as a customer through CIAM Hydra (port 3102) → CIAM Hera (port 3001) → CIAM Medusa (port 3002)
+              Authenticate as a customer through CIAM Hydra (port 3102) → CIAM Hera (port 3001)
             </p>
 
             {ciamData ? (
@@ -96,7 +96,7 @@ export default async function HomePage() {
               <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>Employee Identity (IAM)</h2>
             </div>
             <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
-              Authenticate as an employee through IAM Hydra (port 4102) → IAM Hera (port 4001) → IAM Medusa (port 4002)
+              Authenticate as an employee through IAM Hydra (port 4102) → IAM Hera (port 4001)
             </p>
 
             {iamData ? (
@@ -121,7 +121,7 @@ export default async function HomePage() {
         <div style={{ marginTop: 24, textAlign: "center", color: "#64748b", fontSize: 13 }}>
           <p>
             This demo app is an OAuth2 client that tests the full authorization code flow.
-            Each login button redirects to Ory Hydra, which routes through Hera (authentication) and Medusa (consent) before returning here with an authorization code.
+            Each login button redirects to Ory Hydra, which routes through Hera (authentication and consent) before returning here with an authorization code.
           </p>
         </div>
 
@@ -134,7 +134,7 @@ export default async function HomePage() {
           <div style={{ background: "#1e293b", borderRadius: 12, padding: 32, border: "1px solid #334155" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
               <span style={{ background: "#dc2626", borderRadius: 8, width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 700 }}>A</span>
-              <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>CIAM Athena</h2>
+              <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>CIAM Admin</h2>
             </div>
             <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
               Admin panel for managing customer identities, schemas, and OAuth2 clients on the CIAM domain.
@@ -153,7 +153,7 @@ export default async function HomePage() {
           <div style={{ background: "#1e293b", borderRadius: 12, padding: 32, border: "1px solid #334155" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
               <span style={{ background: "#059669", borderRadius: 8, width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 700 }}>A</span>
-              <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>IAM Athena</h2>
+              <h2 style={{ fontSize: 22, fontWeight: 600, margin: 0 }}>IAM Admin</h2>
             </div>
             <p style={{ color: "#94a3b8", fontSize: 14, marginBottom: 24 }}>
               Admin panel for managing employee identities, schemas, and OAuth2 clients on the IAM domain.

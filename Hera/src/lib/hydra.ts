@@ -22,3 +22,23 @@ export function getLoginRequest(challenge: string) {
 export function acceptLoginRequest(challenge: string, body: Record<string, unknown>) {
 	return hydraAdmin(`/admin/oauth2/auth/requests/login/accept?login_challenge=${challenge}`, "PUT", body);
 }
+
+// --- Consent ---
+
+export function getConsentRequest(challenge: string) {
+	return hydraAdmin(`/admin/oauth2/auth/requests/consent?consent_challenge=${challenge}`);
+}
+
+export function acceptConsentRequest(challenge: string, body: Record<string, unknown>) {
+	return hydraAdmin(`/admin/oauth2/auth/requests/consent/accept?consent_challenge=${challenge}`, "PUT", body);
+}
+
+// --- Logout ---
+
+export function getLogoutRequest(challenge: string) {
+	return hydraAdmin(`/admin/oauth2/auth/requests/logout?logout_challenge=${challenge}`);
+}
+
+export function acceptLogoutRequest(challenge: string) {
+	return hydraAdmin(`/admin/oauth2/auth/requests/logout/accept?logout_challenge=${challenge}`, "PUT");
+}

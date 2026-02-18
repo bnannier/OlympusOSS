@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 export const metadata = {
-	title: "Hera Authentication",
+	title: "Sign In — Olympus",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
